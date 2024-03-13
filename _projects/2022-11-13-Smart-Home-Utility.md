@@ -106,6 +106,7 @@ public async Task SendRequest()
 
 Smart Home Utility is a Master academic group project for the course Advanced Software Engineering at University of Windsor.
 This is an ambitious group project that tested the limit of the team's technical knowledge, resources management, and collaborative skills.
-I am grateful for the contributions of my teammates who participated. 
+
+I am grateful for the contributions of all of my teammates. 
 
 Feel free to check out more details regarding this project [here](https://docs.google.com/document/d/1FvRi-afj2WumNYQj4AEg4FvXbbNEvSQv/edit)
