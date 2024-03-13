@@ -1,4 +1,4 @@
-site: Made Jekyll Theme
+site: Hoa (David) To
 
 url: 
 baseurl: 
@@ -57,5 +57,5 @@ sass:
 plugins:
   - jekyll-sitemap
 
-paginate: 7
+paginate: 0
 paginate_path: "/blog/page-:num/"
