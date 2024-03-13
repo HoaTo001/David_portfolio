@@ -14,7 +14,7 @@ gallery_images:
 
 Smart Home Utility is a proof-of-concept that let the user manage their household utilities (gas, hydro, and electricity) usage through a mobile phone
 
-![](/images/SHU-overview.jpg)
+![](/images/SHU-overview.png)
 
 SHU comprises of 4 main components:
 1. Smart meters
