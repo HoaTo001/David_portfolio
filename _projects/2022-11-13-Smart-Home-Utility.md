@@ -36,7 +36,7 @@ The cylinder model represents the user in their household along with appliances 
 {% include post-components/gallery.html
 columns = 2
 full_width = true
-images = "/images/SHU-lights-off.png,/images/SHU-lights-on.png"
+images = "/images/SHU-lights-off.png,/images/SHU-lights-on.png,"
 %}
 
 This is achieved by writing a C# script to set an initial value, increase the value every frame that the lights are on, calculate the differences, 
