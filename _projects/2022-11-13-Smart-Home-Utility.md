@@ -6,9 +6,9 @@ description:
 featured_image: SHU-title.png
 accent_color: '#4C60E6'
 gallery_images: 
-  - demo.jpg
-  - demo.jpg
-  - demo.jpg
+  - SHU-title.png
+  - SHU-lights-off.png
+  - SHU-lights-on.png
 ---
 **Technology used:** C#, Unity3D, AWS Serverless Architecture, Android Studio
 
