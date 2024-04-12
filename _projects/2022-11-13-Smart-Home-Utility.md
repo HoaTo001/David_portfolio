@@ -16,14 +16,14 @@ Smart Home Utility is a proof-of-concept that let the user manage their househol
 
 ![](/images/SHU-overview.png)
 
-SHU comprises of 4 main components:
+SHU comprises 4 main components:
 1. Smart meters
 2. Central IoT Hub
 3. AWS Database
 4. Mobile application
 
 The meters will be installed on the corresponding pipes within the household. These meters will constantly records the utilities' usages which are stored in the database and displayed on the mobile application.
-The user can monitor the usage, set usage threshold, and recieve notifications through the app
+The user can monitor the usage, set usage threshold, and receive notifications through the app
 
 ---
 #### My work
@@ -43,24 +43,25 @@ This is achieved by writing a C# script to set an initial value, increase the va
 
 {% raw %}
 ```liquid
- IEnumerator measuringElecUsage(int updateTimer)
+IEnumerator measuringElecUsage(int updateTimer)
+{
+    // Send requeset using API after delaying for "timer" seconds.
+    while (true)
     {
-        // Send requeset using API after delaying for "timer" seconds.
-        while (true)
-        {
-            yield return new WaitForSeconds(updateTimer);
-            if ((light_1.enabled && !light_2.enabled) || (!light_1.enabled && light_2.enabled))
-                currentElecUsage += elecDefaultValue;
-            // Light 1 = 1 && Light2 = 1
-            else if (light_1.enabled && light_2.enabled)
-                currentElecUsage += elecDefaultValue * 2;
-            else
-                currentElecUsage = 0.0m;
-            totalElecUsage += currentElecUsage;
-
-            // Debug.Log("Elec Usage : " + currentElecUsage);
-        }
+        yield return new WaitForSeconds(updateTimer);
+        
+        if ((light_1.enabled && !light_2.enabled) || (!light_1.enabled && light_2.enabled))
+            currentElecUsage += elecDefaultValue;
+        // Light 1 = 1 && Light2 = 1
+        else if (light_1.enabled && light_2.enabled)
+            currentElecUsage += elecDefaultValue * 2;
+        else
+            currentElecUsage = 0.0m;
+        totalElecUsage += currentElecUsage;
+            
+        // Debug.Log("Elec Usage : " + currentElecUsage);
     }
+}
     
 ```
 {% endraw %}
