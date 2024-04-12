@@ -14,7 +14,7 @@ gallery_images:
 * Moodle 4.3
 * XAMPP
 * PHP
-  * MySQL
+* MySQL
 
 Moodle is a Learning Management System (LMS) that is used by academic organizations to provide instructors with the ability to manage students' progresses, organize teaching materials, and customize their own teaching methods.
 
