@@ -6,7 +6,7 @@ description:
 featured_image: MWP-title.png
 accent_color: '#4C60E6'
 gallery_images: 
-  - MWP-title.png
+  - MWP-title(1).png
   - SHU-lights-off.png
   - SHU-lights-on.png
 ---
