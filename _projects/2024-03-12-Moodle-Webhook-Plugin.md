@@ -6,7 +6,7 @@ description:
 featured_image: MWP-title.png
 accent_color: '#4C60E6'
 gallery_images: 
-  - SHU-title.png
+  - MWP-title.png
   - SHU-lights-off.png
   - SHU-lights-on.png
 ---
@@ -14,7 +14,7 @@ gallery_images:
 * Moodle 4.3
 * XAMPP
 * PHP
-* MySQL
+  * MySQL
 
 Moodle is a Learning Management System (LMS) that is used by academic organizations to provide instructors with the ability to manage students' progresses, organize teaching materials, and customize their own teaching methods.
 
