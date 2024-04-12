@@ -47,7 +47,7 @@ Furthermore, data in course custom field can be modified anytime via course sett
 
 Secondly, I needed to create an event observer and handler for each type of event that we want to be notified of. For example,
 if we want to be notified when a new discussion is created we need to:
-1. Add the event we want to catch (mod_forum\event\discussion_created)
+* Add the event we want to catch (mod_forum\event\discussion_created)
    
 **events.php**
 
@@ -64,7 +64,7 @@ $observers = array(
 ```
 {% endraw %}
 
-2. Create the handler for the event. Noted that the logic for the handler has to be queued using adhoc task so that it can be run in the background without impacting the performance of the site.
+* Create the handler for the event. Noted that the logic for the handler has to be queued using adhoc task so that it can be run in the background without impacting the performance of the site.
 
 **observer.php**
 
@@ -84,7 +84,7 @@ class local_webhookdata_observer {
 ```
 {% endraw %}
 
-3. Create the logic for the handler (extract event data->get course's endpoint->add relevant info->send data)
+* Create the logic for the handler (extract event data->get course's endpoint->add relevant info->send data)
 
 **discussion_create_noti_task**
 
