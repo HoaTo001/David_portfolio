@@ -43,7 +43,7 @@ This is achieved by writing a C# script to set an initial value, increase the va
 
 {% highlight csharp %}
 {% raw %}
-```
+
 IEnumerator measuringElecUsage(int updateTimer)
 {
     // Send requeset using API after delaying for "timer" seconds.
@@ -63,8 +63,7 @@ IEnumerator measuringElecUsage(int updateTimer)
         // Debug.Log("Elec Usage : " + currentElecUsage);
     }
 }
-    
-```
+
 {% endraw %}
 {% endhighlight %}
 
