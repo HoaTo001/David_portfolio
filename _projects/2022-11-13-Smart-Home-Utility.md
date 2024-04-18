@@ -69,15 +69,16 @@ IEnumerator measuringElecUsage(int updateTimer)
 
 then finally send the data as a JSON to the AWS endpoint.
 
+{% highlight csharp %}
 {% raw %}
-```liquid
+
 public async Task SendRequest()
+{
+    var req = new Request
     {
-        var req = new Request
-        {
-            id = "iNAanuUM", // id
-            type = "centralHub", // type
-            devices = new List<IDevice>{ // devices
+        id = "iNAanuUM", // id
+        type = "centralHub", // type
+        devices = new List<IDevice>{ // devices
         ...
         new Device{
             id = "FKUsIR3l",
@@ -87,21 +88,21 @@ public async Task SendRequest()
                 value = currentElecUsage,
                  unit = "wH",
                  }},
-        }};
+    }};
     
-        var s = JsonConvert.SerializeObject(req, new JsonSerializerSettings
-        {
-            Formatting = Formatting.Indented
-        });
+    var s = JsonConvert.SerializeObject(req, new JsonSerializerSettings
+    {
+        Formatting = Formatting.Indented
+    });
 
-        var httpClient = new HttpClient();
-        httpClient.DefaultRequestHeaders.Add("token", "*******");
-        var response = httpClient.PostAsync("***.amazonaws.com/smart-utility-iot/devices", new StringContent(s)).GetAwaiter().GetResult();
-        ...
-    }  
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("token", "*******");
+    var response = httpClient.PostAsync("***.amazonaws.com/smart-utility-iot/devices", new StringContent(s)).GetAwaiter().GetResult();
+    ...
+}  
 
-```
 {% endraw %}
+{% endhighlight %}
 
 ---
 #### Acknowledgement

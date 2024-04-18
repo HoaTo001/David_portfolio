@@ -51,8 +51,9 @@ if we want to be notified when a new discussion is created we need to:
    
 **events.php**
 
+{% highlight php %}
 {% raw %}
-```liquid
+
 $observers = array(
     array(
         'callback'    => 'local_webhookdata_observer::discussion_created',
@@ -61,15 +62,17 @@ $observers = array(
         'internal'    => true,
         'priority'    => 200,
     ),
-```
+
 {% endraw %}
+{% endhighlight %}
 
 * Create the handler for the event. Noted that the logic for the handler has to be queued using adhoc task so that it can be run in the background without impacting the performance of the site.
 
 **observer.php**
 
+{% highlight php %}
 {% raw %}
-```liquid
+
 class local_webhookdata_observer {
     // Listener for \mod_forum\event\discussion_created event
     
@@ -81,15 +84,17 @@ class local_webhookdata_observer {
         $task = \local_webhookdata\task\discussion_create_noti_task::instance($eventdata);
         \core\task\manager::queue_adhoc_task($task, true);
     }
-```
+
 {% endraw %}
+{% endhighlight %}
 
 * Create the logic for the handler (extract event data->get course's endpoint->add relevant info->send data)
 
 **discussion_create_noti_task**
 
+{% highlight php %}
 {% raw %}
-```liquid
+
 class discussion_create_noti_task extends \core\task\adhoc_task {
     ...
     
@@ -123,8 +128,9 @@ class discussion_create_noti_task extends \core\task\adhoc_task {
         }
         curl_close($curl);
     }
-```
+
 {% endraw %}
+{% endhighlight %}
 
 ---
 #### Motivations
