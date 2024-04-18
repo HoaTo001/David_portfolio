@@ -33,3 +33,5 @@ E
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 N
 _posts/2019-06-30-demo-post.md,d\0\d051b2ae2759e4412f4cf3e3372a5d57296b650b
+T
+$_projects/2019-07-24-demo-project.md,f\0\f02940018b1e2cfef7734f89e31ba9ce137f8ed9

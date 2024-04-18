@@ -39,10 +39,11 @@ full_width = true
 images = "/images/SHU-lights-off.png,/images/SHU-lights-on.png,"
 %}
 
-This is achieved by writing a C# script to set an initial value, increase the value every frame that the lights are on, calculate the differences, 
+This is achieved by writing a C# script to set an initial value, increase the value every frame that the lights are on, calculate the differences,
 
+{% highlight csharp %}
 {% raw %}
-```liquid
+```
 IEnumerator measuringElecUsage(int updateTimer)
 {
     // Send requeset using API after delaying for "timer" seconds.
@@ -65,6 +66,7 @@ IEnumerator measuringElecUsage(int updateTimer)
     
 ```
 {% endraw %}
+{% endhighlight %}
 
 then finally send the data as a JSON to the AWS endpoint.
 
