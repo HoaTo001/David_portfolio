@@ -2,7 +2,7 @@
 title: Smart Home Utility
 subtitle: Proof-of-concept solution to manage household utilities leveraging smart home technology.
 date: 2022-11-13 00:00:00
-description: 
+description: Smart Home Utility is a proof-of-concept that let the user manage their household utilities (gas, hydro, and electricity) usage through a mobile phone.
 featured_image: SHU-title.png
 accent_color: '#4C60E6'
 gallery_images: 
@@ -12,7 +12,7 @@ gallery_images:
 ---
 **Technology used:** C#, Unity3D, AWS Serverless Architecture, Android Studio
 
-Smart Home Utility is a proof-of-concept that let the user manage their household utilities (gas, hydro, and electricity) usage through a mobile phone
+Smart Home Utility is a proof-of-concept that let the user manage their household utilities (gas, hydro, and electricity) usage through a mobile phone.
 
 ![](/images/SHU-overview.png)
 
@@ -23,7 +23,7 @@ SHU comprises 4 main components:
 4. Mobile application
 
 The meters will be installed on the corresponding pipes within the household. These meters will constantly records the utilities' usages which are stored in the database and displayed on the mobile application.
-The user can monitor the usage, set usage threshold, and receive notifications through the app
+The user can monitor the usage, set usage threshold, and receive notifications through the app.
 
 ---
 #### My work
