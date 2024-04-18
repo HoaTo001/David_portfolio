@@ -1,6 +1,6 @@
 ---
 title: Moodle Webhook Plugin
-subtitle: Plugin for Moodle LMS that allow courses to send notification webhooks to custom endpoints
+subtitle: Plugin for Moodle LMS that allow courses to send notification webhooks to custom endpoints.
 date: 2024-03-12 00:00:00
 description: 
 featured_image: MWP-title.png
@@ -90,7 +90,7 @@ class local_webhookdata_observer {
 
 * Create the logic for the handler (extract event data->get course's endpoint->add relevant info->send data)
 
-**discussion_create_noti_task**
+**discussion_create_noti_task.php**
 
 {% highlight php %}
 {% raw %}
@@ -131,6 +131,15 @@ class discussion_create_noti_task extends \core\task\adhoc_task {
 
 {% endraw %}
 {% endhighlight %}
+
+Now, whenever a discussion is created in any course, the event handler will fetch the event's data,
+query necessary information such as course name, instructor name, etc., attach them to a JSON payload, and
+finally send it to the endpoint correlated to that course in which the discussion was created. 
+
+From here, we can use the information within the payload and display the webhook such as:
+>'{instructor}' has created an announcement '{message}'
+
+with {instructor} being the instructor name and {message} being the newly created discussion's content.
 
 ---
 #### Acknowledgement
