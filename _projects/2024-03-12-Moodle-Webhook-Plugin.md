@@ -133,6 +133,11 @@ class discussion_create_noti_task extends \core\task\adhoc_task {
 {% endhighlight %}
 
 ---
-#### Motivations
-[Moodle's notifications](https://docs.moodle.org/403/en/Notifications) alert students, teachers, and other users
-through
+#### Acknowledgement
+
+Moodle Webhook Plugin is inspired by [Valentino's plugin](https://github.com/valentineus/moodle-webhooks).
+Valentino's exceptional work on enabling Moodle users to generate webhooks for various event types, each linked to a specific endpoint, deserves commendation. 
+The key difference between Valentino's project and mine lies in the scope: 
+Valentino's webhook operates on a site-wide level, whereas my plugin operates within the confinements of individual courses.
+
+Consequently, when an event is activated, Moodle dispatches a webhook to the designated endpoint irrespective of the course. Simply put, my plugin caters to a more specialized and targeted scenario that Valentino's solution does not encompass.
